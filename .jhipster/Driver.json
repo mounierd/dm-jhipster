@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20230313093235",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "driver",
+  "fields": [
+    {
+      "fieldName": "firstnameDriver",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "pattern"],
+      "fieldValidateRulesMaxlength": "30",
+      "fieldValidateRulesPattern": "^[A-Z][a-z]+$"
+    },
+    {
+      "fieldName": "lastnameDriver",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "pattern"],
+      "fieldValidateRulesMaxlength": "30",
+      "fieldValidateRulesPattern": "^[A-Z][a-z]+$"
+    },
+    {
+      "fieldName": "phoneCountryCodeDriver",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "phoneDriver",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Driver",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "command",
+      "otherEntityRelationshipName": "driver",
+      "relationshipName": "command",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cooperative",
+      "otherEntityRelationshipName": "driver",
+      "relationshipName": "cooperative",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

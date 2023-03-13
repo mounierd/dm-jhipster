@@ -1,0 +1,69 @@
+{
+  "applications": "*",
+  "changelogDate": "20230313101001",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "client",
+  "fields": [
+    {
+      "fieldName": "idClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "firstnameClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "pattern"],
+      "fieldValidateRulesMaxlength": "30",
+      "fieldValidateRulesPattern": "^[A-Z][a-z]+$"
+    },
+    {
+      "fieldName": "lastnameClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "pattern"],
+      "fieldValidateRulesMaxlength": "30",
+      "fieldValidateRulesPattern": "^[A-Z][a-z]+$"
+    },
+    {
+      "fieldName": "emailClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "pattern"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesPattern": "^([a-zA-Z0-9_\\-\\\\.]+)@([a-zA-Z0-9_\\-\\\\.]+)\\\\.([a-zA-Z]{2,5})$"
+    },
+    {
+      "fieldName": "phoneCountryCodeClient",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "phoneClient",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "addressC",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Client",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "cart",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "cart",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "command",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "command",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -127,6 +127,7 @@
     "jest-junit": "14.0.1",
     "jest-serializer-vue": "2.0.2",
     "jest-sonar": "0.2.12",
+    "jhipster-uml": "^2.0.3",
     "lint-staged": "13.0.3",
     "merge-jsons-webpack-plugin": "2.0.1",
     "mini-css-extract-plugin": "2.6.1",

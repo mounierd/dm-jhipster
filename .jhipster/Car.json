@@ -1,0 +1,15 @@
+{
+  "applications": "*",
+  "changelogDate": "20230313093236",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "car",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Car",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}
